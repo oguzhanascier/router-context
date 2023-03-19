@@ -1,13 +1,11 @@
 import React from 'react'
+import TodoInput from './TodoInput'
 import Todos from './Todos'
-import { MainContext, useContext } from '../context/context'
 
 function TodoList() {
-   const {bloo}= useContext(MainContext)
     return (
-        <div>
-            <h2>{bloo}</h2>
-        
+        <div className='qweqweq'>
+            <TodoInput/>
             <Todos />
             
         </div>
