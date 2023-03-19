@@ -4,13 +4,13 @@ import TodoList from './components/TodoList';
 import { MainContext } from './context/context'
 
 function App() {
-
+  const [newValue, setNewValue] = useState('')
   const [todoList, setTodoList] = useState([])
-  const [bloo, setBloo] = useState('true')
   const data = {
     todoList,
     setTodoList,
-    bloo
+    newValue,
+    setNewValue
   }
 
   return (
