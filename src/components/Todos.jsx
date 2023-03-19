@@ -1,36 +1,29 @@
 import React from 'react'
-import { AiTwotoneDelete, AiFillEdit } from 'react-icons/ai'
+import { Buttons } from './ActionButtons'
+import { MainContext, useContext } from '../context/context'
+
 function Todos() {
+    const {todoList} = useContext(MainContext)
 
-    const todoDelete = () => {
-        console.log('delete')
-    }
-    const todoEdit = () => {
-        console.log('todoEdit')
-    }
-
-
+    console.log(todoList)
 
     return (
         <div className='todoCont'>
-            <ul className='todosList'>
-                <li className='todo'>
-                    <p className="text"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur minima repudiandae recusandae error, eligendi magnam quaerat unde tempora reprehenderit necessitatibus, inventore nulla excepturi provident corporis omnis! Expedita, placeat fuga?</p>
-                    <div className="buttonGroup">
-
-                        <button><AiTwotoneDelete /></button>
-                        <button><AiFillEdit /></button>
-                    </div>
-                </li>
-                <li className='todo'>
-                    <p className="text"> Lorem, ipsum dolor</p>
-                    <div className="buttonGroup">
-                        <button onClick={todoDelete}><AiTwotoneDelete /></button>
-                        <button><AiFillEdit onClick={todoEdit} /></button>
-                    </div>
-                </li>
+            <ul className='todos-ul'>
+                {todoList.map((item, index) => {
+                    return (
+                        <li className="todo" key={index}>
+                            <p className='text'>{item.value} {item.id}</p>
+                            <div className="buttonGroup">
+                            <Buttons todoId={item.id} />
+                            </div>
+                        </li>
+                    )
+                }
+                )}
 
             </ul>
+
         </div>
     )
 }
