@@ -5,8 +5,7 @@ function TodoInput() {
     const { todoList, setTodoList, newValue, setNewValue } = useContext(MainContext)
 
     useEffect(() => {
-        console.log(todoList)
-      
+        console.log(todoList)      
     }, [todoList])
 
     const addItem = () => {
@@ -27,10 +26,9 @@ function TodoInput() {
    
     
 
-    console.log(newValue)
     return (
         <div className='formGroup'>
-        <input className='todoInput' type="text" placeholder='what do you think' value={newValue} onChange={(e) => setNewValue(e.target.value)} />
+        <input className='todoInput' type="text" placeholder='what do you think' value={newValue} onChange={(e) => setNewValue(e.target.value)}  />
         <button className='addButton' onClick={addItem}>Add</button>
         </div>
     )
