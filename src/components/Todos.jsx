@@ -5,7 +5,6 @@ import { MainContext, useContext } from '../context/context'
 function Todos() {
     const {todoList} = useContext(MainContext)
 
-    console.log(todoList)
 
     return (
         <div className='todoCont'>

@@ -5,6 +5,7 @@ function TodoInput() {
     const { todoList, setTodoList, newValue, setNewValue } = useContext(MainContext)
 
     useEffect(() => {
+        console.log(todoList)
       
     }, [todoList])
 
@@ -21,7 +22,6 @@ function TodoInput() {
         setNewValue('')
        }
 
-       console.log(todoList)
     }
 
    

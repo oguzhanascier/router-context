@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
 import { MainContext } from './context/context'
@@ -12,6 +12,11 @@ function App() {
     newValue,
     setNewValue
   }
+
+    
+  
+    
+
 
   return (
     <div className="container">
