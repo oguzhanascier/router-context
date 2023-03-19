@@ -6,16 +6,20 @@ import { MainContext } from './context/context'
 function App() {
   const [newValue, setNewValue] = useState('')
   const [todoList, setTodoList] = useState([])
+  const [isEdit, setIsEdit] = useState(false)
+
   const data = {
     todoList,
     setTodoList,
     newValue,
-    setNewValue
+    setNewValue, 
+    isEdit, 
+    setIsEdit
   }
 
-    
-  
-    
+
+
+
 
 
   return (

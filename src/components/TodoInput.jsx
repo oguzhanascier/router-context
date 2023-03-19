@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import { MainContext, useContext } from '../context/context'
 
 function TodoInput() {
-    const { todoList, setTodoList, newValue, setNewValue } = useContext(MainContext)
+    const { todoList, setTodoList, newValue, setNewValue, isEdit } = useContext(MainContext)
 
     useEffect(() => {
         console.log(todoList)      
@@ -29,7 +29,9 @@ function TodoInput() {
     return (
         <div className='formGroup'>
         <input className='todoInput' type="text" placeholder='what do you think' value={newValue} onChange={(e) => setNewValue(e.target.value)}  />
-        <button className='addButton' onClick={addItem}>Add</button>
+
+        {!isEdit ? <button className='addButton' onClick={addItem}>Add</button> : <div></div>}
+        
         </div>
     )
 }
