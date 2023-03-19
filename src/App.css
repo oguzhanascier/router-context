@@ -50,4 +50,26 @@ cursor: pointer;
 }
 
 
+.todoInput{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 20px;
+  padding: 5px;
+  border: none;
 
+}
+
+.formGroup{
+  display: flex;
+  position: relative;
+}
+
+.addButton{
+  position: absolute;
+  background-color: rgb(131, 85, 155);
+  top: 0;
+  right: 26px;
+  height: 100%;
+
+}
